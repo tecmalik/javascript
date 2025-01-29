@@ -39,7 +39,12 @@ function getNames(){
 
 getNames();
  
-//6
+//6.
+
+const person3 = {firstName : Az, lastName : muhammed , age : 70 }
+ 
+
+
 
 
  
