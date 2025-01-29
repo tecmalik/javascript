@@ -9,7 +9,7 @@ const car = { make:"Toyota",
 		year:2021 };
 
 function carfunction(car){
-for (const property in car) console.log(property +" : "+ car[property] ); 
+for (const property in car) console.log(`${property} : ${car[property]}`); 
 	}
 
 carfunction(car);
@@ -41,7 +41,36 @@ getNames();
  
 //6.
 
-const person3 = {firstName : Az, lastName : muhammed , age : 70 }
+const person3 = { FirstName: "john" , LastName : "Doe" , age : 25 }
+const values = Object.values(person3)
+function getDetails(){
+	console.log(`First Name = ${values[0]}, Last Name : ${values[1]}`)
+}
+getDetails();
+
+
+//7.
+const book = {title:"The Great Gatsby", author:"F.Scott Fitzgerald", yearPublished : 1925 }
+ 
+function getBookInfo(book){
+	const {title,author} = book;
+	console.log(title + " by " + author )
+}
+getBookInfo(book)
+
+
+//8.
+
+samsDetails = {name:'Sam',age:40 , profession:"Engineer"};
+
+function getNameAndAge(samsDetails){
+	const {name,age} = samsDetails
+	console.log(name +" "+ age )
+}
+getNameAndAge(samsDetails);
+
+
+
  
 
 
