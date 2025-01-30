@@ -67,11 +67,11 @@ console.log(reverse(121));
 
 //6.5.
 
-const number1 = prompt("Enter first number to be sorted:");
-const number2 = prompt("Enter second number to be sorted:");
-const number3 = prompt("Enter third number to be sorted:");
+let number1 = prompt("Enter first number to be sorted:");
+let number2 = prompt("Enter second number to be sorted:");
+let number3 = prompt("Enter third number to be sorted:");
 
-function sorting(number1, number2, number3){
+/**function sorting(numbe1, number2, number3){
 	let temp = 0;
 	if (number1 < number2){
 		temp = number2;
@@ -81,20 +81,41 @@ function sorting(number1, number2, number3){
 	 else if(number2 < number3){
 		temp = number3;
 		number3 = number2;
-		number3 = temp;
+		number2 = temp;
 	}
+return [number1, number2, number3];
 }
 
 
 function finalsorting(number1, number2, number3){
-	if (number1 > number2 && number2 > number3){
+	if (number1 >= number2 && number2 >= number3){
 		return [number1, number2, number3];
-	}else{
-		sorting(number1, number2, number3);
-		finalsorting(number1, number2, number3);
 	}
+	sorting(number1, number2, number3);
+	finalsorting(sorting(number1, number2, number3)[0], sorting(number1, number2, number3)[1], sorting(number1, number2, number3)[2]);
+	
 }
 
 
+function sorting(number1,number2,number3){
+	if (number1>=number2 && number2>=number3){
+	return [number1, number2, number3];
+	}
+	else if (number2>=number1 && number1>=number3){
+	return (`${number2} , ${number1}, ${number3}`);
+	}
+	else if (number3>=number1 && number1>=number2){
+	return [`${number3}, ${number1}, ${number2})`];
+	}
+	else if (number2>=number3 && number3>=number1){
+	return [`${number2} ,${number3}, ${number1}`];
+	}
+	else if (number3 >=number2 && number2<=number1)
+	return [`${number3}, ${number2} , ${number1}`];
+	}
 
-console.log(finalsorting(6,10,12))
+}
+
+*/
+
+sort
