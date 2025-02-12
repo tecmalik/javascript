@@ -5,5 +5,12 @@
   },
   "scripts": {
     "test": "jest"
-  }
+  },
+  "name": "classwork",
+  "version": "1.0.0",
+  "main": "classwork.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

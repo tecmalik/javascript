@@ -15,8 +15,10 @@ console.log(Array.of(firstName));
 
 console.log(Array.from(firstName));
 let pop = arrayOfNumbers.pop();
-console.log(pop);
+console.log(pop); 
 
+let animals = ["dog" , "chicks", "goat","fish","rat","sheep","hegoat","goat"];
+console.log(animals.splice(2,3));
 
 
     
