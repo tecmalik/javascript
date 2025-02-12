@@ -1,4 +1,4 @@
-const bankAccount = { owner: "Alice", 
+    const bankAccount = { owner: "Alice", 
     balance: 500 ,
     deposit: function(amount){
         if(amount < 0) throw new Error
@@ -14,4 +14,4 @@ const bankAccount = { owner: "Alice",
         }
     }
 
-module.exports = bankAccount
+module.exports = {bankAccount}

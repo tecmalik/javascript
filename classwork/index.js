@@ -25,7 +25,22 @@ function addThreeToEachElement(arr){
 function addindexToEachElement(arr){
     let result  =  arr.map((number, index)=>(number+index ))
     return result;
+};
+function getOddNumber(array){
+    return array.filter((number)=>number % 2 != 0)
+};
+function getWordsGreaterThanFourLetters(arrayOfWords) {
+    return arrayOfWords.filter((word)=> word.length > 4);
 }
-
-module.exports = {getDoubledNumbers, getEvenNumbers, addThreeToEachElement,addindexToEachElement}
+function getStudents(students){
+    return students.filter((student)=> student.age>20)
+}
+module.exports = {
+    getStudents,
+    getWordsGreaterThanFourLetters,
+    getOddNumber,
+    getDoubledNumbers,
+    getEvenNumbers,
+    addThreeToEachElement,
+    addindexToEachElement}
 

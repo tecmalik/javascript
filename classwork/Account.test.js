@@ -1,4 +1,4 @@
-const{ bankAccount } = require("./Account.js");
+const{bankAccount } = require("./Account.js");
 
     const bankAccount = { owner: "Alice", 
     balance: 500 ,
