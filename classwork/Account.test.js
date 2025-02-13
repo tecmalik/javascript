@@ -1,20 +1,4 @@
-const{bankAccount } = require("./Account.js");
-
-    const bankAccount = { owner: "Alice", 
-    balance: 500 ,
-    deposit: function(amount){
-        if(amount < 0) throw new Error
-        if(amount = 0) throw new Error 
-        bankAccount.balance += amount
-        return bankAccount.balance
-
-    },
-     withdraw: (amount) => { 
-        if (amount > bankAccount.balance) throw new Error
-        if (amount < 0) throw new Error
-        bankAccount.balance -= amount
-        }
-    }
+const{bankAccount} = require("./Account.js");
 
     
 test('test that Account can deposit money',()=>{
@@ -24,8 +8,15 @@ test('test that Account can deposit money',()=>{
 })
 
 test('test that Account can withdraw', ()=>{
-    let result = bankAccount.withdraw(500);
-    let answer = 0;
+     bankAccount.withdraw(400);
+    let result = bankAccount.balance
+    let answer = 100;
     expect(result).toBe(answer)
 })
+test('test that nagative amount cant be withdrawed ',()=>{
+    
+    expect(()=>bankAccount.withdraw(-1000)).toThrow("invald input")
+    expect(()=>bankAccount.withdraw(1000)).toThrow("insurficient funds")
+})
+
 

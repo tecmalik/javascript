@@ -47,9 +47,9 @@ test("return objects with greater then 20", ()=>{
         {name: "john", age:20},
         {name: "jane", age:21},
         {name: "Alice", age:19},
-        {name: "Bob", age:22},
-    ];
+        {name: "Bob", age:22},];
     let result =  getStudents(students);
     let answer = [{name: "Bob", age: 22},{name: "jane", age: 21}]
     expect(result).toStrictEqual(answer);
 })
+
