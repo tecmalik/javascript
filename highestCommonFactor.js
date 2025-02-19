@@ -14,7 +14,8 @@ console.log(getLowestNumber(digits))
 function getHighestCommonFactors(numbers){
     let lowest = getLowestNumber(numbers); 
     let divissor = 2
-    highestCommonFactors = []
+   let highestcommonfactors = []
+  let eachNumbers = 0
     while (1 in numbers == false && divissor < lowest){
     eachNumbers = 0
     for(let index = 0; index < numbers.length; index+=1 ){
@@ -23,18 +24,18 @@ function getHighestCommonFactors(numbers){
         }
     }
     if (eachNumbers == numbers.length-1){
-        highestCommonFactors.push(divissor)
+        highestcommonfactor.push(divissor)
         let newNumber = []
         for(let index = 0; index < numbers.lenght; index+=1 ){
             newNumber = numbers[index]/divissor
         }
-        newNumber = numbers  
+       numbers = newNumber 
     }
     else if (eachNumbers != numbers.length-1 && divissor != lowest) {
-        divisor += 1;
+        divissor += 1
     }
-} 
-return highestCommonFactors
+    } 
+return highestcommonfactors
 }
 
 let value =[4,8,12]

@@ -1,7 +1,7 @@
 // class syntax in es script 
 class Human{
     #name;
-    #nage;
+    #age;
     constructor(name,age){
         this.#name= name;
         this.#age= age;
@@ -15,7 +15,10 @@ class Human{
     getfirstName(name){
         return this.name
     }
+    
 
 }
-let personOne = new Human("chinedu",12)
-console.log(personOne)
+let personOne = new Human("chinedu",12, "male")
+console.log(personOne.super())
+
+module.exports = {Human}
