@@ -65,3 +65,9 @@ test("filter out the unhealthy items from the shoppingList",()=>{
         ]
         expect(result).toStrictEqual(answer);
 })
+
+test("replacing all even numbers with 0 and all odd numbers with 1",()=>{
+    result = replaceEvanNumbers([1,2,4,5,6,8,8,1])
+    answer = [1,0,0,1,0,0,0,1] 
+    expect(result).toEqual(answer)
+})
