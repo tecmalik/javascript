@@ -4,7 +4,7 @@ class Human extends classInJs{
  #gender;
 
  constructor(name,age,gender){
-    super(namefage);
+    super(name,age);
 
     this.#gender = gender
      }
