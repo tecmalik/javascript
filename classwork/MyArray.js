@@ -14,29 +14,34 @@
     }
     add(item) {
         if (this.size < this.length) {
-        this.
+        this.elements += item
+        this.size+=1;
         }
-        this.size++;
-
+        return "index out of bound"
     }
 
-    public String get(int index) {
-    return this.elements[index];
+    length() {
+    return this.length;
     }
 
-    public int size() {
+    size() {
         return this.size;
     }
-
-    public int getIndexOf(String element) {
-        for(int index = 0; index < size; index++) {
+    getIndex(index) {
+        for(let index = 0; index < size; index++) {
             if(this.elements[index].equals(element)) return index;
         }
-        return -1;
+        return "index out of bound";
+    }
+    getIndexOf(element) {
+        for(let index = 0; index < size; index++) {
+            if(this.elements[index].equals(element)) return index;
+        }
+        return "index out of bound";
     }
 
-    public boolean contains(String element) {
-        for(int count = 0; count < size; count++) {
+    contains(element) {
+        for(let count = 0; count < size; count++) {
             if(this.elements[count].equals(element)) {
                 return true;
             }
@@ -44,33 +49,33 @@
         return false;
     }
 
-    public void remove(String element) {
+    remove(element) {
         if(this.contains(element)) {
-            for(int count = 0; count < size-1; count++) {
-                if(element.equals(elements[count]) && count != size-1 ) {
-                    for(int index = count; index < size-1; index++) {
-                        elements[index] = elements[index+1];
+            for(let count = 0; count < size-1; count++) {
+                if(element.equals(this.elements[count]) && count != size-1 ) {
+                    for(let index = count; index < size-1; index++) {
+                        this.elements[index] = this.elements[index+1];
                     }
-                    elements[size-1] = null;
-                    size--;
+                    this.elements[size-1] = null;
+                    this.size--;
                     return;
                 }
                 else if(count == size-1) {
-                    elements[count] = null;
+                    this.elements[count] = null;
                 }
             }
-            size--;
+            this.size--;
         }
     }
 
-    public void clear() {
-        for(int count = 0; count < size; count++) {
+    clear() {
+        for(let count = 0; count < size; count++) {
             elements[count] = null;
-            size = 0;
+            this.size = 0;
         }
     }
 
-    public void setElement(int index, String element) {
+    setElement(index, element) {
         this.elements[index] = element;
     }
 
